@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2019 6:17:39 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Project.Cycle" table="CYCLE">
+        <id name="Cycle_ID" type="int">
+            <column name="CYCLE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="Cycle_Name" type="java.lang.String">
+            <column name="CYCLE_NAME" />
+        </property>
+        <property name="Cycle_Category" type="java.lang.String">
+            <column name="CYCLE_CATEGORY" />
+        </property>
+        <property name="Cycle_Colour" type="java.lang.String">
+            <column name="CYCLE_COLOUR" />
+        </property>
+        <property name="Cycle_Type" type="java.lang.String">
+            <column name="CYCLE_TYPE" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+    </class>
+</hibernate-mapping>
