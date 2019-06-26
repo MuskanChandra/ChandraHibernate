@@ -16,8 +16,9 @@ public class CycleMain {
 		
 		factory = new Configuration().configure().buildSessionFactory();
 		
-		UpdateCycle();
-		ListCycle();
+		// UpdateCycle();
+		// ListCycle();
+		DeleteCycle();
 	}
 	private static void saveCycle()
 	{
@@ -75,6 +76,7 @@ public class CycleMain {
 	
 	// ---------------------------------For Update Data--------------------------------
 	
+	/*
 	private static void UpdateCycle() 
 	{
 		Session session = factory.openSession();
@@ -101,5 +103,33 @@ public class CycleMain {
 			session.close();
 		}
 	}
+	
+	*/
+	// ---------------------------------For Delete Data--------------------------------
+	
+		private static void DeleteCycle() 
+		{
+			Session session = factory.openSession();
+		      Transaction tx = null;
+
+			try
+				{
+					tx=session.beginTransaction();						
+				    Query q=session.createQuery("Delete from Cycle where Cycle_ID=:data");
+				    q.setParameter("data", 2);
+				    q.executeUpdate();
+					tx.commit();
+				}
+			catch (Exception e )
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					tx.rollback();
+				}
+			finally
+			{
+				session.close();
+			}
+		}
 
 }
