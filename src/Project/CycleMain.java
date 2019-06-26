@@ -15,10 +15,11 @@ public class CycleMain {
 	{
 		
 		factory = new Configuration().configure().buildSessionFactory();
-		
+		 
+		saveCycle();
 		// UpdateCycle();
 		// ListCycle();
-		DeleteCycle();
+		// DeleteCycle();
 	}
 	private static void saveCycle()
 	{
@@ -29,12 +30,12 @@ public class CycleMain {
 		{
 			tx = session.beginTransaction();
 			Cycle c = new Cycle();
-			c.Cycle_ID = 1;
-			c.Cycle_Name = "Mountain_Bike";
-			c.Cycle_Category = "Mountain";
-			c.Cycle_Colour = "White & Blue";
+			c.Cycle_ID = 2;
+			c.Cycle_Name = "Himalayan_Bike";
+			c.Cycle_Category = "Himalayan";
+			c.Cycle_Colour = "White & Red";
 			c.Cycle_Type = "8th ger with Special";
-			c.price = 100000;
+			c.price = 150000;
 			session.save(c);
 			tx.commit();
 		}
@@ -44,6 +45,8 @@ public class CycleMain {
 		}
 	}
 	
+	
+
 	// ------------------------------------For List of Data-----------------------------------
 	
 	private static void ListCycle() 
@@ -107,6 +110,8 @@ public class CycleMain {
 	*/
 	// ---------------------------------For Delete Data--------------------------------
 	
+	
+	/*
 		private static void DeleteCycle() 
 		{
 			Session session = factory.openSession();
@@ -131,5 +136,6 @@ public class CycleMain {
 				session.close();
 			}
 		}
+		*/
 
 }
