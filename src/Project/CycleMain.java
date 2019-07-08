@@ -30,12 +30,12 @@ public class CycleMain {
 		{
 			tx = session.beginTransaction();
 			Cycle c = new Cycle();
-			c.Cycle_ID = 2;
-			c.Cycle_Name = "Himalayan_Bike";
-			c.Cycle_Category = "Himalayan";
-			c.Cycle_Colour = "White & Red";
+			c.Cycle_ID = 3;
+			c.Cycle_Name = "Bridge Cycle";
+			c.Cycle_Category = "Mountain";
+			c.Cycle_Colour = "White & blue";
 			c.Cycle_Type = "8th ger with Special";
-			c.price = 150000;
+			c.price = 50000;
 			session.save(c);
 			tx.commit();
 		}

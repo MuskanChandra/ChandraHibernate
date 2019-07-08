@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 26, 2019 10:37:07 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Project.Products" table="PRODUCTS">
+        <id name="Product_ID" type="int">
+            <column name="PRODUCT_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="Product_Name" type="java.lang.String">
+            <column name="PRODUCT_NAME" />
+        </property>
+        <property name="Product_Company_Name" type="java.lang.String">
+            <column name="PRODUCT_COMPANY_NAME" />
+        </property>
+        <property name="Product_Category" type="java.lang.String">
+            <column name="PRODUCT_CATEGORY" />
+        </property>
+        <property name="Product_Colour" type="java.lang.String">
+            <column name="PRODUCT_COLOUR" />
+        </property>
+        <property name="Product_Quantity" type="int">
+            <column name="PRODUCT_QUANTITY" />
+        </property>
+        <property name="Product_Price" type="double">
+            <column name="PRODUCT_PRICE" />
+        </property>
+        <property name="Product_Date" type="java.lang.String">
+            <column name="PRODUCT_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

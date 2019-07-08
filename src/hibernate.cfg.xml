@@ -14,6 +14,9 @@
 
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		
+		<mapping resource = "Products.hbm.xml"></mapping>
+				<mapping resource = "Employee.hbm.xml"></mapping>
 		<mapping resource = "Cycle.hbm.xml"></mapping>
+		<mapping class="NewIdea.N_Idea" />
 		</session-factory>
 </hibernate-configuration>  
